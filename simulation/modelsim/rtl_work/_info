@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim
+vSDRAM_IS42S16160B_DRIVER
+Z1 !s110 1660587788
+!i10b 1
+!s100 UCd>^b_YM0_JYCX<C>Ajh3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBSESi7ZnlkO;@Dz3985aH3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1660586759
+8D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v
+FD:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v
+!i122 0
+L0 12 350
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1660587788.000000
+!s107 D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER|D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER
+Z7 tCvgOpt 0
+n@s@d@r@a@m_@i@s42@s16160@b_@d@r@i@v@e@r
+vSDRAM_IS42S16160B_DRIVER_vlg_tst
+R1
+!i10b 1
+!s100 WDFkJM43VWdn6OUoi=@o;0
+R2
+I8kmR?>5@O3kL_M<gOKkm41
+R3
+R0
+w1660247690
+8D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt
+FD:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt
+!i122 1
+L0 29 59
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim|D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim
+R7
+n@s@d@r@a@m_@i@s42@s16160@b_@d@r@i@v@e@r_vlg_tst

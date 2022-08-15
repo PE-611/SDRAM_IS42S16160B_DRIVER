@@ -1,0 +1,11 @@
+
+State Machine - |SDRAM_IS42S16160B_DRIVER|state
+Name state.NOP state.PRECHARGE state.WRITE state.READ state.REFRESH state.ACTIVATE_ROW state.MRS state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.MRS 0 0 0 0 0 0 1 1 
+state.ACTIVATE_ROW 0 0 0 0 0 1 0 1 
+state.REFRESH 0 0 0 0 1 0 0 1 
+state.READ 0 0 0 1 0 0 0 1 
+state.WRITE 0 0 1 0 0 0 0 1 
+state.PRECHARGE 0 1 0 0 0 0 0 1 
+state.NOP 1 0 0 0 0 0 0 1 

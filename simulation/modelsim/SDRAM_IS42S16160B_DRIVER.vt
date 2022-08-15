@@ -1,0 +1,88 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "08/11/2022 22:54:18"
+                                                                                
+// Verilog Test Bench template for design : SDRAM_IS42S16160B_DRIVER
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module SDRAM_IS42S16160B_DRIVER_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [12:0] ADDR;
+reg [1:0] BANK;
+reg [15:0] treg_DRAM_DQ;
+reg SDRAM_CLK_IN;
+reg reset;
+reg start_read;
+reg start_write;
+// wires                                               
+wire [12:0]  DRAM_ADDR;
+wire [1:0]  DRAM_BA;
+wire DRAM_CKE;
+wire DRAM_CLK;
+wire DRAM_CLK_SHIFT;
+wire [4:0]  DRAM_CMD;
+wire [15:0]  DRAM_DQ;
+wire [1:0]  DRAM_DQM;
+wire process_flg;
+
+// assign statements (if any)                          
+assign DRAM_DQ = treg_DRAM_DQ;
+SDRAM_IS42S16160B_DRIVER i1 (
+// port map - connection between master ports and signals/registers   
+	.ADDR(ADDR),
+	.BANK(BANK),
+	.DRAM_ADDR(DRAM_ADDR),
+	.DRAM_BA(DRAM_BA),
+	.DRAM_CKE(DRAM_CKE),
+	.DRAM_CLK(DRAM_CLK),
+	.DRAM_CLK_SHIFT(DRAM_CLK_SHIFT),
+	.DRAM_CMD(DRAM_CMD),
+	.DRAM_DQ(DRAM_DQ),
+	.DRAM_DQM(DRAM_DQM),
+	.SDRAM_CLK_IN(SDRAM_CLK_IN),
+	.process_flg(process_flg),
+	.reset(reset),
+	.start_read(start_read),
+	.start_write(start_write)
+);
+initial begin
+SDRAM_CLK_IN <= 1'b0;    
+
+reset <= 1'b1;
+
+
+
+               
+$display("Running testbench");                       
+end     
+                                               
+always 
+#10 SDRAM_CLK_IN <= !SDRAM_CLK_IN;
+
+
+endmodule
+

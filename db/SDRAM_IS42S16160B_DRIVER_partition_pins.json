@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CLK_SHIFT",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CMD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CMD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CMD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "process_flg",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_CLK_IN",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start_write",
+					"strict" : false
+				},
+				{
+					"name" : "start_read",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
