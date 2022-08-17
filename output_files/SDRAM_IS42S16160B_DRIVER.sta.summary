@@ -2,76 +2,40 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'DRAM_CLK_SHIFT~reg0'
-Slack : -1.905
-TNS   : -65.997
-
 Type  : Slow 1200mV 85C Model Setup 'SDRAM_CLK_IN'
-Slack : -1.360
-TNS   : -1.360
-
-Type  : Slow 1200mV 85C Model Hold 'DRAM_CLK_SHIFT~reg0'
-Slack : 0.281
-TNS   : 0.000
+Slack : -2.494
+TNS   : -139.348
 
 Type  : Slow 1200mV 85C Model Hold 'SDRAM_CLK_IN'
-Slack : 0.361
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SDRAM_CLK_IN'
 Slack : -3.000
-TNS   : -5.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DRAM_CLK_SHIFT~reg0'
-Slack : -1.000
-TNS   : -49.000
-
-Type  : Slow 1200mV 0C Model Setup 'DRAM_CLK_SHIFT~reg0'
-Slack : -1.594
-TNS   : -54.482
+TNS   : -93.000
 
 Type  : Slow 1200mV 0C Model Setup 'SDRAM_CLK_IN'
-Slack : -1.214
-TNS   : -1.214
-
-Type  : Slow 1200mV 0C Model Hold 'DRAM_CLK_SHIFT~reg0'
-Slack : 0.252
-TNS   : 0.000
+Slack : -2.170
+TNS   : -116.689
 
 Type  : Slow 1200mV 0C Model Hold 'SDRAM_CLK_IN'
-Slack : 0.320
+Slack : 0.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SDRAM_CLK_IN'
 Slack : -3.000
-TNS   : -5.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DRAM_CLK_SHIFT~reg0'
-Slack : -1.000
-TNS   : -49.000
-
-Type  : Fast 1200mV 0C Model Setup 'DRAM_CLK_SHIFT~reg0'
-Slack : -0.615
-TNS   : -15.657
+TNS   : -93.000
 
 Type  : Fast 1200mV 0C Model Setup 'SDRAM_CLK_IN'
-Slack : -0.450
-TNS   : -0.450
-
-Type  : Fast 1200mV 0C Model Hold 'DRAM_CLK_SHIFT~reg0'
-Slack : 0.150
-TNS   : 0.000
+Slack : -0.916
+TNS   : -39.223
 
 Type  : Fast 1200mV 0C Model Hold 'SDRAM_CLK_IN'
-Slack : 0.194
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SDRAM_CLK_IN'
 Slack : -3.000
-TNS   : -5.156
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DRAM_CLK_SHIFT~reg0'
-Slack : -1.000
-TNS   : -49.000
+TNS   : -98.604
 
 ------------------------------------------------------------

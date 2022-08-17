@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SDRAM_IS42S16160B_DRIVER
-Mon Aug 15 21:06:59 2022
+Wed Aug 17 22:20:20 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -49,16 +49,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 15 21:06:59 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 17 22:20:20 2022       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SDRAM_IS42S16160B_DRIVER                    ;
 ; Top-level Entity Name              ; SDRAM_IS42S16160B_DRIVER                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 79                                          ;
-;     Total combinational functions  ; 77                                          ;
-;     Dedicated logic registers      ; 51                                          ;
-; Total registers                    ; 51                                          ;
-; Total pins                         ; 60                                          ;
+; Total logic elements               ; 140                                         ;
+;     Total combinational functions  ; 138                                         ;
+;     Dedicated logic registers      ; 90                                          ;
+; Total registers                    ; 90                                          ;
+; Total pins                         ; 68                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -178,36 +178,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 79                  ;
-;                                             ;                     ;
-; Total combinational functions               ; 77                  ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 27                  ;
-;     -- 3 input functions                    ; 6                   ;
-;     -- <=2 input functions                  ; 44                  ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 45                  ;
-;     -- arithmetic mode                      ; 32                  ;
-;                                             ;                     ;
-; Total registers                             ; 51                  ;
-;     -- Dedicated logic registers            ; 51                  ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 60                  ;
-;                                             ;                     ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; DRAM_CLK_SHIFT~reg0 ;
-; Maximum fan-out                             ; 51                  ;
-; Total fan-out                               ; 458                 ;
-; Average fan-out                             ; 1.73                ;
-+---------------------------------------------+---------------------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 140                ;
+;                                             ;                    ;
+; Total combinational functions               ; 138                ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 56                 ;
+;     -- 3 input functions                    ; 17                 ;
+;     -- <=2 input functions                  ; 65                 ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 86                 ;
+;     -- arithmetic mode                      ; 52                 ;
+;                                             ;                    ;
+; Total registers                             ; 90                 ;
+;     -- Dedicated logic registers            ; 90                 ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 68                 ;
+;                                             ;                    ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; SDRAM_CLK_IN~input ;
+; Maximum fan-out                             ; 90                 ;
+; Total fan-out                               ; 787                ;
+; Average fan-out                             ; 2.07               ;
++---------------------------------------------+--------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,26 +215,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name              ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------------------+--------------+
-; |SDRAM_IS42S16160B_DRIVER  ; 77 (77)             ; 51 (51)                   ; 0           ; 0            ; 0       ; 0         ; 60   ; 0            ; |SDRAM_IS42S16160B_DRIVER ; SDRAM_IS42S16160B_DRIVER ; work         ;
+; |SDRAM_IS42S16160B_DRIVER  ; 138 (138)           ; 90 (90)                   ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |SDRAM_IS42S16160B_DRIVER ; SDRAM_IS42S16160B_DRIVER ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |SDRAM_IS42S16160B_DRIVER|state                                                                                           ;
-+--------------------+-----------+-----------------+-------------+------------+---------------+--------------------+-----------+------------+
-; Name               ; state.NOP ; state.PRECHARGE ; state.WRITE ; state.READ ; state.REFRESH ; state.ACTIVATE_ROW ; state.MRS ; state.IDLE ;
-+--------------------+-----------+-----------------+-------------+------------+---------------+--------------------+-----------+------------+
-; state.IDLE         ; 0         ; 0               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 0          ;
-; state.MRS          ; 0         ; 0               ; 0           ; 0          ; 0             ; 0                  ; 1         ; 1          ;
-; state.ACTIVATE_ROW ; 0         ; 0               ; 0           ; 0          ; 0             ; 1                  ; 0         ; 1          ;
-; state.REFRESH      ; 0         ; 0               ; 0           ; 0          ; 1             ; 0                  ; 0         ; 1          ;
-; state.READ         ; 0         ; 0               ; 0           ; 1          ; 0             ; 0                  ; 0         ; 1          ;
-; state.WRITE        ; 0         ; 0               ; 1           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
-; state.PRECHARGE    ; 0         ; 1               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
-; state.NOP          ; 1         ; 0               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
-+--------------------+-----------+-----------------+-------------+------------+---------------+--------------------+-----------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SDRAM_IS42S16160B_DRIVER|state                                                                                                                                                 ;
++---------------------+--------------------+---------------------+---------------------+-----------------+-------------+------------+---------------+--------------------+-----------+------------+
+; Name                ; state.NOP_AFTER_RW ; state.NOP_BEFORE_RW ; state.NOP_INIT_AREF ; state.PRECHARGE ; state.WRITE ; state.READ ; state.REFRESH ; state.ACTIVATE_ROW ; state.MRS ; state.IDLE ;
++---------------------+--------------------+---------------------+---------------------+-----------------+-------------+------------+---------------+--------------------+-----------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0                   ; 0               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 0          ;
+; state.MRS           ; 0                  ; 0                   ; 0                   ; 0               ; 0           ; 0          ; 0             ; 0                  ; 1         ; 1          ;
+; state.ACTIVATE_ROW  ; 0                  ; 0                   ; 0                   ; 0               ; 0           ; 0          ; 0             ; 1                  ; 0         ; 1          ;
+; state.REFRESH       ; 0                  ; 0                   ; 0                   ; 0               ; 0           ; 0          ; 1             ; 0                  ; 0         ; 1          ;
+; state.READ          ; 0                  ; 0                   ; 0                   ; 0               ; 0           ; 1          ; 0             ; 0                  ; 0         ; 1          ;
+; state.WRITE         ; 0                  ; 0                   ; 0                   ; 0               ; 1           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
+; state.PRECHARGE     ; 0                  ; 0                   ; 0                   ; 1               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
+; state.NOP_INIT_AREF ; 0                  ; 0                   ; 1                   ; 0               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
+; state.NOP_BEFORE_RW ; 0                  ; 1                   ; 0                   ; 0               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
+; state.NOP_AFTER_RW  ; 1                  ; 0                   ; 0                   ; 0               ; 0           ; 0          ; 0             ; 0                  ; 0         ; 1          ;
++---------------------+--------------------+---------------------+---------------------+-----------------+-------------+------------+---------------+--------------------+-----------+------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -245,22 +247,7 @@ Encoding Type:  One-Hot
 ; DRAM_DQM[0]~reg0                       ; Stuck at GND due to stuck port data_in ;
 ; DRAM_DQM[1]~reg0                       ; Stuck at GND due to stuck port data_in ;
 ; DRAM_CKE~reg0                          ; Stuck at VCC due to stuck port data_in ;
-; DRAM_ADDR[1]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_BA[1]~reg0                        ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[11]~reg0                     ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[0]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[2]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[4]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[6]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[7]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[10]~reg0                     ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[12]~reg0                     ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[8]~reg0                      ; Merged with DRAM_BA[0]~reg0            ;
-; DRAM_ADDR[5]~reg0                      ; Merged with DRAM_ADDR[3]~reg0          ;
-; DRAM_BA[0]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; DRAM_CMD[3]~reg0                       ; Stuck at GND due to stuck port data_in ;
-; state.READ                             ; Lost fanout                            ;
-; state.WRITE                            ; Lost fanout                            ;
 ; state~4                                ; Lost fanout                            ;
 ; state~5                                ; Lost fanout                            ;
 ; state~6                                ; Lost fanout                            ;
@@ -269,7 +256,7 @@ Encoding Type:  One-Hot
 ; state~9                                ; Lost fanout                            ;
 ; state~10                               ; Lost fanout                            ;
 ; state~11                               ; Lost fanout                            ;
-; Total Number of Removed Registers = 27 ;                                        ;
+; Total Number of Removed Registers = 12 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -278,12 +265,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 51    ;
-; Number of registers using Synchronous Clear  ; 35    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 6     ;
+; Total registers                              ; 90    ;
+; Number of registers using Synchronous Clear  ; 57    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Clock Enable       ; 34    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -296,21 +283,23 @@ Encoding Type:  One-Hot
 ; DRAM_CMD[0]~reg0                       ; 1       ;
 ; DRAM_CMD[1]~reg0                       ; 1       ;
 ; DRAM_CMD[2]~reg0                       ; 1       ;
-; process_flg~reg0                       ; 2       ;
+; process_flg~reg0                       ; 4       ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |SDRAM_IS42S16160B_DRIVER|cnt_autorefresh[10] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|DRAM_ADDR[3]~reg0   ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|Trc[1]              ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|DRAM_CMD[0]~reg0    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |SDRAM_IS42S16160B_DRIVER|cnt_autorefresh[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|Trc[1]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|Trcd[0]            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|Tcas[2]            ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |SDRAM_IS42S16160B_DRIVER|DRAM_ADDR[10]~reg0 ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |SDRAM_IS42S16160B_DRIVER|DRAM_CMD[2]~reg0   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------+
@@ -318,16 +307,19 @@ Encoding Type:  One-Hot
 +----------------------+--------------+----------------------------------------------------+
 ; Parameter Name       ; Value        ; Type                                               ;
 +----------------------+--------------+----------------------------------------------------+
-; time_200_us          ; 50           ; Signed Integer                                     ;
+; Fclk                 ; 160000000    ; Signed Integer                                     ;
+; tREF                 ; 64           ; Signed Integer                                     ;
+; tINIT                ; 200          ; Signed Integer                                     ;
+; quantity_autorefresh ; 8192         ; Signed Integer                                     ;
+; tCK                  ; 7            ; Signed Integer                                     ;
+; REFRESH_TIME         ; 1116         ; Signed Integer                                     ;
+; init_time            ; 36363        ; Signed Integer                                     ;
 ; q_AREF_for_init      ; 8            ; Signed Integer                                     ;
 ; MRS_DATA             ; 001000101000 ; Unsigned Binary                                    ;
 ; trc                  ; 10           ; Signed Integer                                     ;
 ; trp                  ; 3            ; Signed Integer                                     ;
-; CAS_latency          ; 3            ; Signed Integer                                     ;
-; tREF                 ; 64           ; Signed Integer                                     ;
-; quantity_autorefresh ; 8192         ; Signed Integer                                     ;
-; tCK                  ; 7            ; Signed Integer                                     ;
-; REFRESH_TIME         ; 1116         ; Signed Integer                                     ;
+; cas                  ; 3            ; Signed Integer                                     ;
+; rcd                  ; 3            ; Signed Integer                                     ;
 +----------------------+--------------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -337,26 +329,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 60                          ;
-; cycloneiii_ff         ; 51                          ;
-;     CLR               ; 6                           ;
-;     ENA               ; 5                           ;
+; boundary_port         ; 68                          ;
+; cycloneiii_ff         ; 90                          ;
+;     CLR               ; 10                          ;
+;     ENA               ; 15                          ;
 ;     ENA SCLR          ; 17                          ;
-;     SCLR              ; 18                          ;
-;     plain             ; 5                           ;
+;     ENA SLD           ; 2                           ;
+;     SCLR              ; 40                          ;
+;     plain             ; 6                           ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 83                          ;
-;     arith             ; 32                          ;
-;         2 data inputs ; 32                          ;
-;     normal            ; 51                          ;
+; cycloneiii_lcell_comb ; 144                         ;
+;     arith             ; 52                          ;
+;         2 data inputs ; 52                          ;
+;     normal            ; 92                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 27                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 56                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.31                        ;
+; Average LUT depth     ; 2.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -375,16 +368,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Aug 15 21:06:53 2022
+    Info: Processing started: Wed Aug 17 22:20:14 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SDRAM_IS42S16160B_DRIVER -c SDRAM_IS42S16160B_DRIVER
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sdram_is42s16160b_driver.v
     Info (12023): Found entity 1: SDRAM_IS42S16160B_DRIVER File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 12
 Info (12127): Elaborating entity "SDRAM_IS42S16160B_DRIVER" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at SDRAM_IS42S16160B_DRIVER.v(93): object "CAS" assigned a value but never read File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 93
-Warning (10230): Verilog HDL assignment warning at SDRAM_IS42S16160B_DRIVER.v(105): truncated value with size 24 to match size of target (13) File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 105
-Warning (10230): Verilog HDL assignment warning at SDRAM_IS42S16160B_DRIVER.v(315): truncated value with size 24 to match size of target (13) File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 315
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 29
     Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 29
@@ -403,51 +393,23 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 29
     Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 29
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
     Warning (13410): Pin "DRAM_CKE" is stuck at VCC File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 19
-    Warning (13410): Pin "DRAM_DQM[0]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_DQM[1]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
-    Warning (13410): Pin "DRAM_CMD[3]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 264
+    Warning (13410): Pin "DRAM_DQM[0]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 274
+    Warning (13410): Pin "DRAM_DQM[1]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 274
+    Warning (13410): Pin "DRAM_CMD[3]" is stuck at GND File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 274
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/output_files/SDRAM_IS42S16160B_DRIVER.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ADDR[0]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[1]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[2]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[3]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[4]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[5]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[6]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[7]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[8]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[9]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[10]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[11]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "ADDR[12]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 13
-    Warning (15610): No output dependent on input pin "BANK[0]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 14
-    Warning (15610): No output dependent on input pin "BANK[1]" File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v Line: 14
-Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 25 output pins
+Info (21057): Implemented 208 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 30 input pins
+    Info (21059): Implemented 22 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Mon Aug 15 21:06:59 2022
+    Info (21061): Implemented 140 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Wed Aug 17 22:20:20 2022
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:14
 

@@ -1,0 +1,121 @@
+# Reading pref.tcl
+# do SDRAM_IS42S16160B_DRIVER_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER {D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:06:51 on Aug 16,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER" D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v 
+# -- Compiling module SDRAM_IS42S16160B_DRIVER
+# ** Warning: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(39): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(322): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(349): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(355): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(375): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(383): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	SDRAM_IS42S16160B_DRIVER
+# End time: 20:06:51 on Aug 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# 
+# vlog -vlog01compat -work work +incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim {D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:06:51 on Aug 16,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim" D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt 
+# -- Compiling module SDRAM_IS42S16160B_DRIVER_vlg_tst
+# 
+# Top level modules:
+# 	SDRAM_IS42S16160B_DRIVER_vlg_tst
+# End time: 20:06:51 on Aug 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  SDRAM_IS42S16160B_DRIVER_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" SDRAM_IS42S16160B_DRIVER_vlg_tst 
+# Start time: 20:06:51 on Aug 16,2022
+# Loading work.SDRAM_IS42S16160B_DRIVER_vlg_tst
+# Loading work.SDRAM_IS42S16160B_DRIVER
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (9) for port 'ADDR_COL'. The port definition is at: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRAM_IS42S16160B_DRIVER_vlg_tst/i1 File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt Line: 55
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+vlog -reportprogress 300 -work work D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:07:07 on Aug 16,2022
+# vlog -reportprogress 300 -work work D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt 
+# -- Compiling module SDRAM_IS42S16160B_DRIVER_vlg_tst
+# 
+# Top level modules:
+# 	SDRAM_IS42S16160B_DRIVER_vlg_tst
+# End time: 20:07:07 on Aug 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.SDRAM_IS42S16160B_DRIVER_vlg_tst
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (9) for port 'ADDR_COL'. The port definition is at: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/SDRAM_IS42S16160B_DRIVER.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /SDRAM_IS42S16160B_DRIVER_vlg_tst/i1 File: D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt Line: 55
+run
+vlog -reportprogress 300 -work work D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:07:57 on Aug 16,2022
+# vlog -reportprogress 300 -work work D:/Job/project_quartus/SDRAM_IS42S16160B_DRIVER/simulation/modelsim/SDRAM_IS42S16160B_DRIVER.vt 
+# -- Compiling module SDRAM_IS42S16160B_DRIVER_vlg_tst
+# 
+# Top level modules:
+# 	SDRAM_IS42S16160B_DRIVER_vlg_tst
+# End time: 20:07:57 on Aug 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.SDRAM_IS42S16160B_DRIVER_vlg_tst
+run
+# GetModuleFileName: Не найден указанный модуль.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+# Running testbench
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/SDRAM_IS42S16160B_DRIVER_vlg_tst/i1/state
+restart -f
+run
+# GetModuleFileName: Не найден указанный модуль.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+# Running testbench
+# End time: 20:43:49 on Aug 16,2022, Elapsed time: 0:36:58
+# Errors: 0, Warnings: 0

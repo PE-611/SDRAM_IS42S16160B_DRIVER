@@ -1,11 +1,13 @@
 
 State Machine - |SDRAM_IS42S16160B_DRIVER|state
-Name state.NOP state.PRECHARGE state.WRITE state.READ state.REFRESH state.ACTIVATE_ROW state.MRS state.IDLE 
-state.IDLE 0 0 0 0 0 0 0 0 
-state.MRS 0 0 0 0 0 0 1 1 
-state.ACTIVATE_ROW 0 0 0 0 0 1 0 1 
-state.REFRESH 0 0 0 0 1 0 0 1 
-state.READ 0 0 0 1 0 0 0 1 
-state.WRITE 0 0 1 0 0 0 0 1 
-state.PRECHARGE 0 1 0 0 0 0 0 1 
-state.NOP 1 0 0 0 0 0 0 1 
+Name state.NOP_AFTER_RW state.NOP_BEFORE_RW state.NOP_INIT_AREF state.PRECHARGE state.WRITE state.READ state.REFRESH state.ACTIVATE_ROW state.MRS state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.MRS 0 0 0 0 0 0 0 0 1 1 
+state.ACTIVATE_ROW 0 0 0 0 0 0 0 1 0 1 
+state.REFRESH 0 0 0 0 0 0 1 0 0 1 
+state.READ 0 0 0 0 0 1 0 0 0 1 
+state.WRITE 0 0 0 0 1 0 0 0 0 1 
+state.PRECHARGE 0 0 0 1 0 0 0 0 0 1 
+state.NOP_INIT_AREF 0 0 1 0 0 0 0 0 0 1 
+state.NOP_BEFORE_RW 0 1 0 0 0 0 0 0 0 1 
+state.NOP_AFTER_RW 1 0 0 0 0 0 0 0 0 1 

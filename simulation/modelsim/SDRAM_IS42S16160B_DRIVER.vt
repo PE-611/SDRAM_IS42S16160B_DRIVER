@@ -18,7 +18,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "08/11/2022 22:54:18"
+// Generated on "08/16/2022 20:06:44"
                                                                                 
 // Verilog Test Bench template for design : SDRAM_IS42S16160B_DRIVER
 // 
@@ -31,7 +31,8 @@ module SDRAM_IS42S16160B_DRIVER_vlg_tst();
 // general purpose registers
 reg eachvec;
 // test vector input registers
-reg [12:0] ADDR;
+reg [11:0] ADDR_COL;
+reg [11:0] ADDR_ROW;
 reg [1:0] BANK;
 reg [15:0] treg_DRAM_DQ;
 reg SDRAM_CLK_IN;
@@ -39,12 +40,12 @@ reg reset;
 reg start_read;
 reg start_write;
 // wires                                               
-wire [12:0]  DRAM_ADDR;
+wire [11:0]  DRAM_ADDR;
 wire [1:0]  DRAM_BA;
 wire DRAM_CKE;
 wire DRAM_CLK;
 wire DRAM_CLK_SHIFT;
-wire [4:0]  DRAM_CMD;
+wire [3:0]  DRAM_CMD;
 wire [15:0]  DRAM_DQ;
 wire [1:0]  DRAM_DQM;
 wire process_flg;
@@ -53,7 +54,8 @@ wire process_flg;
 assign DRAM_DQ = treg_DRAM_DQ;
 SDRAM_IS42S16160B_DRIVER i1 (
 // port map - connection between master ports and signals/registers   
-	.ADDR(ADDR),
+	.ADDR_COL(ADDR_COL),
+	.ADDR_ROW(ADDR_ROW),
 	.BANK(BANK),
 	.DRAM_ADDR(DRAM_ADDR),
 	.DRAM_BA(DRAM_BA),
@@ -71,8 +73,28 @@ SDRAM_IS42S16160B_DRIVER i1 (
 );
 initial begin
 SDRAM_CLK_IN <= 1'b0;    
-
 reset <= 1'b1;
+
+ADDR_COL <= 12'd9;
+ADDR_ROW <= 12'd12;
+
+start_read <= 1'b1;
+start_write <= 1'b1;
+
+#10000 start_read <= 1'b0;
+#30 start_read <= 1'b1;
+
+
+#1000 start_write <= 1'b0;
+#30 start_write <= 1'b1;
+
+#33940 start_write <= 1'b0;
+#30 start_write <= 1'b1;
+
+#44750 start_write <= 1'b0;
+#30 start_write <= 1'b1;
+
+
 
 
 
@@ -85,4 +107,3 @@ always
 
 
 endmodule
-

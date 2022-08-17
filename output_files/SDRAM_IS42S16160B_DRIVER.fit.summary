@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Aug 15 21:07:04 2022
+Fitter Status : Successful - Wed Aug 17 22:20:25 2022
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : SDRAM_IS42S16160B_DRIVER
 Top-level Entity Name : SDRAM_IS42S16160B_DRIVER
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 80 / 22,320 ( < 1 % )
-    Total combinational functions : 78 / 22,320 ( < 1 % )
-    Dedicated logic registers : 51 / 22,320 ( < 1 % )
-Total registers : 51
-Total pins : 60 / 154 ( 39 % )
+Total logic elements : 141 / 22,320 ( < 1 % )
+    Total combinational functions : 138 / 22,320 ( < 1 % )
+    Dedicated logic registers : 90 / 22,320 ( < 1 % )
+Total registers : 90
+Total pins : 68 / 154 ( 44 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )

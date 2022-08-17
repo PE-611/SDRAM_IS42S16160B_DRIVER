@@ -4,7 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "DRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[4]",
 					"strict" : false
 				},
 				{
@@ -12,15 +28,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "DRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_ADDR[9]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_CLK",
+					"name" : "DRAM_ADDR[10]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_CLK_SHIFT",
+					"name" : "DRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_BA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_BA[1]",
 					"strict" : false
 				},
 				{
@@ -40,7 +76,111 @@
 					"strict" : false
 				},
 				{
+					"name" : "ADDR_ROW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[0]",
+					"strict" : false
+				},
+				{
 					"name" : "SDRAM_CLK_IN",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_ROW[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDR_COL[11]",
+					"strict" : false
+				},
+				{
+					"name" : "BANK[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BANK[1]",
 					"strict" : false
 				},
 				{
@@ -48,11 +188,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "start_write",
+					"name" : "start_read",
 					"strict" : false
 				},
 				{
-					"name" : "start_read",
+					"name" : "start_write",
 					"strict" : false
 				}
 			]
